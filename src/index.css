@@ -1,0 +1,86 @@
+:root {
+  color-scheme: dark;
+  --bg: #12090b;
+  --bg-accent: #2d0f14;
+  --paper: #fff4ea;
+  --muted-paper: rgba(255, 236, 221, 0.72);
+  --accent: #e45a4c;
+  --accent-weak: rgba(255, 215, 173, 0.72);
+  --panel-border: rgba(255, 215, 173, 0.16);
+  --panel-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  font-family:
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--paper);
+  background:
+    radial-gradient(circle at top, rgba(220, 78, 67, 0.18), transparent 34%),
+    linear-gradient(180deg, var(--bg-accent), var(--bg));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 80%);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+#root {
+  width: min(1600px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 16px 0 28px;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+code {
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+}
+
+@media (max-width: 900px) {
+  #root {
+    width: min(100%, calc(100% - 20px));
+    padding: 10px 0 20px;
+  }
+}
